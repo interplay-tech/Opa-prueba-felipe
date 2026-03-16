@@ -1,0 +1,9 @@
+node_modules
+dist
+storybook-static
+.DS_Store
+*.local
+.codex/
+*.tsbuildinfo
+vite.config.js
+vite.config.d.ts

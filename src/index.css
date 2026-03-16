@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@700;800&family=Nunito:wght@900&family=Poppins:wght@400;500;600;700;800&display=swap");
+@import "tailwindcss";
+
+:root {
+  --opa-navy: #001c3e;
+  --opa-cyan: #00b7e3;
+  --opa-ink: #00142c;
+  --opa-surface: #e8ecf7;
+  --opa-muted: #62748e;
+  --font-heading: "Montserrat", "Segoe UI", sans-serif;
+  --font-body: "Poppins", "Inter", "Segoe UI", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  color: var(--opa-ink);
+  background: var(--opa-surface);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+}
+
+.font-heading {
+  font-family: var(--font-heading);
+}
+
+.scrollbar-hide {
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+@keyframes opaFabRingPulse {
+  0% {
+    opacity: 0.95;
+    transform: scale(1);
+  }
+
+  65% {
+    opacity: 0;
+    transform: scale(1.95);
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(1.95);
+  }
+}
+
+@keyframes opaFabHaloPulse {
+  0%,
+  100% {
+    opacity: 0.35;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 0.95;
+    transform: scale(1.18);
+  }
+}
+
+@keyframes opaFabIconPulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.14);
+  }
+}
+
+.opa-fab-ring {
+  animation: opaFabRingPulse 1.6s cubic-bezier(0.16, 1, 0.3, 1) infinite;
+}
+
+.opa-fab-ring-delay {
+  animation-delay: 0.8s;
+}
+
+.opa-fab-halo {
+  animation: opaFabHaloPulse 1.6s ease-in-out infinite;
+}
+
+.opa-fab-icon {
+  animation: opaFabIconPulse 1.6s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .opa-fab-ring,
+  .opa-fab-ring-delay,
+  .opa-fab-halo,
+  .opa-fab-icon {
+    animation: none;
+  }
+}
