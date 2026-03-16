@@ -7,3 +7,5 @@ storybook-static
 *.tsbuildinfo
 vite.config.js
 vite.config.d.ts
+.storybook/*.js
+.storybook/*.d.ts
